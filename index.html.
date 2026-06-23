@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daleth Bonet | Creative Typography Portfolio</title>
+    <style>
+        /* Estilos Globales y Paleta Minimalista */
+        :root {
+            --bg-color: #f7f5f0; /* Fondo beige claro */
+            --card-bg: #ffffff;
+            --text-main: #111111;
+            --text-muted: #555555;
+            --accent-color: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* Barra de Navegación */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: var(--card-bg);
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            margin-left: 20px;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--text-muted);
+        }
+
+        /* Contenedor Principal */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Rejilla de Proyectos */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 600px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Tarjeta de Proyecto */
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 280px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-weight: bold;
+            font-size: 14px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-info {
+            padding: 25px;
+        }
+
+        .project-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--text-main);
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .project-meta {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .project-meta strong {
+            color: var(--accent-color);
+        }
+
+        /* Sección Sobre Mí */
+        .about-section {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .about-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+        }
+
+        .about-content h2 {
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .about-content p {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 20px;
+            max-width: 800px;
+        }
+
+        .btn-action {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: background-color 0.3s;
+            border: 1px solid var(--accent-color);
+        }
+
+        .btn-action:hover {
+            background-color: transparent;
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header>
+        <div class="logo">DB DALETH BONET</div>
+        <nav>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#sobre-mi">Sobre Mí</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- SECCIÓN DE PROYECTOS -->
+        <section id="proyectos" class="projects-grid">
+            
+            <!-- Tarjeta 1: Botánica -->
+            <div class="project-card">
+                <!-- NOTA: Reemplaza "imagen-botanica.jpg" por la ruta de tu mockup de playera de plantas -->
+                <div class="project-image" style="background-image: url('imagen-botanica.jpg');">
+                    [ Mockup: I Just Need More Plants ]
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Serie Botánica</h3>
+                    <p class="project-desc">Diseñadas para entusiastas de las plantas de interior, estas composiciones utilizan paletas de colores cálidas y retro junto con una tipografía limpia y legible.</p>
+                    <p class="project-meta"><strong>Objetivo:</strong> Crear arte listo para vestir que celebre la naturaleza y la vegetación.</p>
+                    <p class="project-meta"><strong>Palabras clave:</strong> Plantas, Menos Drama, Arte Botánico.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Autos -->
+            <div class="project-card">
+                <!-- NOTA: Reemplaza "imagen-autos.jpg" -->
+                <div class="project-image" style="background-image: url('imagen-autos.jpg');">
+                    [ Mockup: Money Can't Buy Happiness ]
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Serie Automotriz</h3>
+                    <p class="project-desc">Dirigido a la comunidad del tuning y la mecánica "hazlo tú mismo" (DIY). Cuenta con fuentes tipográficas en bloque, llamativas y con un efecto de desgaste para un estilo industrial.</p>
+                    <p class="project-meta"><strong>Objetivo:</strong> Conectar con el humor de los apasionados de los autos y las refacciones.</p>
+                    <p class="project-meta"><strong>Palabras clave:</strong> Humor Mecánico, Apasionados del Motor, Piezas de Auto.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3: Gaming -->
+            <div class="project-card">
+                <!-- NOTA: Reemplaza "imagen-gaming.jpg" -->
+                <div class="project-image" style="background-image: url('imagen-gaming.jpg');">
+                    [ Mockup: I'm Not Lagging ]
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Cultura Pixel</h3>
+                    <p class="project-desc">Diseños minimalistas de estilo arcade retro y voxel, utilizando neones brillantes y contrastes marcados.</p>
+                    <p class="project-meta"><strong>Objetivo:</strong> Conectar y resonar con la comunidad de videojugadores de PC y consolas.</p>
+                    <p class="project-meta"><strong>Palabras clave:</strong> Lag, Cargando (Buffering), Humor Gamer.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4: Organización -->
+            <div class="project-card">
+                <!-- NOTA: Reemplaza "imagen-organizacion.jpg" -->
+                <div class="project-image" style="background-image: url('imagen-organizacion.jpg');">
+                    [ Mockup: Chaos Coordinator ]
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Estilo de Vida y Organización</h3>
+                    <p class="project-desc">Diseños de texto limpios y minimalistas ideales para el hogar y la oficina.</p>
+                    <p class="project-meta"><strong>Objetivo:</strong> Elevar los espacios funcionales mediante líneas limpias y estéticas.</p>
+                    <p class="project-meta"><strong>Palabras clave:</strong> Coordinador del Caos, Productividad, Hogar Estético.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SECCIÓN SOBRE MÍ -->
+        <section id="sobre-mi" class="about-section">
+            <!-- NOTA: Reemplaza "tu-foto.jpg" por la ruta de tu fotografía -->
+            <div class="about-avatar" style="background-image: url('tu-foto.jpg');"></div>
+            <div class="about-content">
+                <h2>Sobre Mí y Mi Proceso</h2>
+                <p>Hola, soy Daleth Bonet. Me dedico a crear diseños tipográficos originales e impactantes que conectan con comunidades apasionadas. Cuento con experiencia en la investigación de nichos, optimización de productos para SEO y soy estrictamente respetuosa de la Propiedad Intelectual. Trabajo 100% original.</p>
+                <a href="mailto:tu-correo@ejemplo.com" class="btn-action">Solicitar Mis Servicios</a>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
